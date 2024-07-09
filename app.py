@@ -15,6 +15,11 @@ import numpy as np
 app = Flask(__name__)
 CORS(app)  # Enable CORS
 
+
+@app.route('/')
+def welcome():
+    return "You can now copy paste with the extension."
+    
 @app.route('/execute', methods=['POST'])
 def execute():
     try:
